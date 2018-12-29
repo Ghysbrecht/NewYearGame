@@ -1,0 +1,54 @@
+﻿<Window x:Class="NewYearGame.ScoreBoard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewYearGame"
+        mc:Ignorable="d"
+        Title="Score Board NY2019" Height="900" Width="1920">
+    <Grid Background="White">
+        <StackPanel>
+            <!-- Random info, logo and time -->
+            <Grid Height="270" Background="White">
+                <TextBlock Text="NY2019 Game" FontSize="70" FontFamily="Tw Cen MT" Width="450" Height="70" Margin="0,0,1000,0"></TextBlock>
+                <Image Name="Logo" Height="210" Width="210" Margin="20" Source="Resources/ghysbrecht_no_background_full.png"></Image>
+                <TextBlock Name="TimeTextBlock" Text="00:00:00" FontSize="70" FontFamily="Tw Cen MT" Width="275" Height="70" Margin="1000,0,0,0"></TextBlock>
+            </Grid>
+            
+            <!-- Round information -->
+            <Grid Height="350" Background="LightGray">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <!-- Game -->
+                    <Grid Width="200" Height="300" Margin="25">
+                        <TextBlock Text="Game:" FontSize="60" FontFamily="Tw Cen MT" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50"></TextBlock>
+                        <TextBlock Name="GameTextBlock" Text="0/0" FontSize="70" FontFamily="Tw Cen MT" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50"></TextBlock>
+                    </Grid>
+
+                    <!-- Round -->
+                    <Grid Width="200" Height="300" Margin="25">
+                        <TextBlock Text="Round:" FontSize="60" FontFamily="Tw Cen MT" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50"></TextBlock>
+                        <TextBlock Name="RoundTextBlock" Text="0/0" FontSize="70" FontFamily="Tw Cen MT" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50"></TextBlock>
+                    </Grid>
+
+                    <!-- Round  Info-->
+                    <Grid Visibility="Visible" Name="DefaultRoundGrid" Width="900" Height="300" Margin="80,25,25,25">
+                        <TextBlock Name="RoundTitleTextBlock" Text="Round Title" FontSize="60" FontFamily="Tw Cen MT" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30"></TextBlock>
+                        <TextBlock Name="RoundDescriptionTextBlock" Text="Round Description" FontSize="40" FontFamily="Tw Cen MT" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,30"></TextBlock>
+                        <TextBlock Name="RoundAnswerTextBlock" Text="? Answer ?" FontSize="50" FontFamily="Tw Cen MT" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30"></TextBlock>
+                        <TextBlock Name="RoundScoreTextBlock" Text="Score" FontSize="50" FontFamily="Tw Cen MT" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,-3"></TextBlock>
+                    </Grid>
+                    <Grid Visibility="Collapsed" Name="LetterGenGrid" Width="900" Height="300" Margin="80,25,25,25">
+                        <TextBlock Name="GenerateLetterTextBlock" Text="K" FontSize="230" HorizontalAlignment="Center"></TextBlock>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            
+            <!-- Scores -->
+            <Grid Height="250">
+                <StackPanel Name="ScorePanel" Orientation="Horizontal" HorizontalAlignment="Center">
+                    
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
